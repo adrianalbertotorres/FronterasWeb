@@ -11,6 +11,9 @@ import { PaginasWebComponent } from './paginas-web/paginas-web.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { HttpClientModule } from '@angular/common/http';    // Para servicio de Contacto
+import { FormsModule } from '@angular/forms';               //
+import { MessageService } from './services/message.service';//
 
 const routes: Routes = [
   { path: 'inicio', component:InicioComponent },
@@ -27,14 +30,17 @@ const routes: Routes = [
     InicioComponent,
     PaginasWebComponent,
     ContactoComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
