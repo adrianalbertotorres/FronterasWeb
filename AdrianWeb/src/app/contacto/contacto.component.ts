@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../services/message.service';
+import * as swal from 'sweetalert'; // npm install sweetalert
 
 @Component({
   selector: 'app-contacto',
@@ -13,6 +14,8 @@ export class ContactoComponent {
     contactForm(form) {
     this._MessageService.sendMessage(form).subscribe(() => {
     console.log ("mensaje enviado");
+    swal.default("Tu mensaje se ha enviado correctamente","Gracias por contactarnos");
+  
     });
     }
    }
