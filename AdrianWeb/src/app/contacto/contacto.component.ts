@@ -8,6 +8,8 @@ import * as swal from 'sweetalert'; // npm install sweetalert
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent {
+
+  datos:any={nombre:"",asunto:"",email:"",mensaje:""}
  
     constructor(public _MessageService: MessageService) {
    }
@@ -15,7 +17,7 @@ export class ContactoComponent {
     this._MessageService.sendMessage(form).subscribe(() => {
     console.log ("mensaje enviado");
     swal.default("Tu mensaje se ha enviado correctamente","Gracias por contactarnos");
-  
+    this.datos={nombre:"",asunto:"",email:"",mensaje:""}
     });
     }
    }

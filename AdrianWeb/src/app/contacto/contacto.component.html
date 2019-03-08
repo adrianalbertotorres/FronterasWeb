@@ -3,22 +3,22 @@
   <form (ngSubmit)="contactForm(form.value)" #form="ngForm" >
   <div class="form-group">
   <label>Nombre</label>
-  <input type="text" class="form-control" name="nombre" ngModel>
+  <input type="text" class="form-control" name="nombre" [(ngModel)]="datos.nombre" ngModel>
   </div>
   <div class="form-group">
   <label>Asunto</label>
-  <input type="text" class="form-control" name="asunto" ngModel>
+  <input type="text" class="form-control" name="asunto" [(ngModel)]="datos.asunto" ngModel>
   </div>
   <div class="form-group">
   <label>E-mail</label>
-  <input type="email" class="form-control" name="email" ngModel>
+  <input type="email" class="form-control" name="email" [(ngModel)]="datos.email" ngModel>
   </div>
   <div class="form-group">
   <label>Mensaje</label>
-  <textarea class="form-control" cols="30" rows="6" name="mensaje" ngModel></textarea>
+  <textarea class="form-control" cols="30" rows="6" name="mensaje"[(ngModel)]="datos.mensaje" ngModel></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
-  <form onsubmit="this.reset()"></form>
+  
   
  </div>
