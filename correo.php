@@ -16,10 +16,11 @@ $message = $formulario->mensaje;
 
 ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-   # $from = "adriantorres@fronteraswebs.com";
+  
     $to = "adriantorres@fronteraswebs.com";
-   # $subject = "Checking PHP mail";
-   # $message = "PHP mail works just fine";
     $headers = "From:" . $from;
     mail($to,$subject,$message, $headers);
+    $to="fronteraswebs@gmail.com";
+    mail($to,$subject,$message, $headers);
+
    
