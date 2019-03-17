@@ -1,0 +1,9 @@
+#empresa{
+    font-family:'miletra';
+    margin: auto;
+}
+
+@font-face{
+    font-family: 'miletra';
+    src: url('./../../MTCORSVA.TTF');
+}

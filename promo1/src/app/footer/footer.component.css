@@ -1,0 +1,16 @@
+#empresa{
+    font-family:'miletra';
+    margin: auto;
+    padding-top: 12px;
+    text-align: center;
+}
+
+@font-face{
+    font-family: 'miletra';
+    src: url('./../../MTCORSVA.TTF');
+    }
+
+    h5{
+      color: limegreen  
+    }
+
